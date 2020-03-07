@@ -1,0 +1,28 @@
+{
+  "name": "crud-node-zd",
+  "version": "1.0.0",
+  "description": "CRUD Node ZD example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqabrahan/crud-node-zd.git"
+  },
+  "keywords": [
+    "crud",
+    "node"
+  ],
+  "author": "Abrahan Apaza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aqabrahan/crud-node-zd/issues"
+  },
+  "homepage": "https://github.com/aqabrahan/crud-node-zd#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3"
+  }
+}
