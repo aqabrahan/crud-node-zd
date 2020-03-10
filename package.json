@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/aqabrahan/crud-node-zd#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.3"
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
   }
 }

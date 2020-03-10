@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const chalk = require('chalk');
 const dbConfig = require('./properties');
 
-const connected = chalk.bold.blue;
+const connected = chalk.bold.green;
 const error = chalk.bold.red;
 const disconnected = chalk.bold.yellow;
 const termination = chalk.bold.magenta;
@@ -11,7 +11,7 @@ const db = () => {
   mongoose.connect(dbConfig.DB);
 
   mongoose.connection.on('connected', () => {
-    console.log(connected("Mongoose default connection is open to ", dbConfig.DB));
+    console.log(connected("Mongoose default connection is open to ==> ", dbConfig.DB));
   });
 
   mongoose.connection.on('error', (err) => {
