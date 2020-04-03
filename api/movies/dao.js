@@ -1,31 +1,30 @@
 const mongoose = require('mongoose');
 const moviesSchema = require('./model');
 
-moviesSchema.static = {
-  create: (data, cb) => {
+moviesSchema.statics = {
+  create: function(data, cb) {
     const movie = new this(data);
     movie.save(cb);
   },
 
-  get: (query, cb) => {
+  get: function(query, cb) {
     this.find(query, cb);
   },
 
-  getByName: (query, cb) => {
+  getByName: function(query, cb) {
     this.find(query, cb);
   },
 
-  update: (query, updateData, cb) => {
-    this.findAndUpdate(query, {$set: updateData}, {new: true}, cb);
+  update: function(query, updateData, cb) {
+    this.findById(query, {$set: updateData}, {new: true}, cb);
   },
 
-  delete: (query, cb) => {
+  delete: function(query, cb) {
     this.findOneAndDelete(query, cb);
   }
 }
 
-const movieModel = mongoose.model('Movies', moviesSchema);
-
-module.exports = movieModel;
+const moviesModel = mongoose.model('Movies', moviesSchema);
+module.exports = moviesModel;
 
 

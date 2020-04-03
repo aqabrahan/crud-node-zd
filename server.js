@@ -7,6 +7,7 @@ const db = require('./config/database');
 
 //routes
 const movieRoutes = require('./api/movies/route');
+const contactRoutes = require('./api/contacts/route');
 
 const app = express();
 
@@ -36,7 +37,8 @@ app.use((req, res, next) => {
 //use express router
 app.use('/api', router);
 
-//call movie router
+//call endpoints router
+contactRoutes(router);
 movieRoutes(router);
 
 app.listen(config.PORT, (req, res) => {
